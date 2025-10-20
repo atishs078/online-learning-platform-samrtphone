@@ -1,14 +1,20 @@
 const { platformSelect } = require('nativewind/theme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: [
-    "./App.{js,jsx,ts,tsx}",     // Main App file
-    "./src/**/*.{js,jsx,ts,tsx}", // Include all files inside src
-    "./src/pages/**/*.{js,jsx,ts,tsx}", // Explicitly include pages folder
-    "./src/components/**/*.{js,jsx,ts,tsx}", // If you have components folder
+    "./App.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
   ],
   presets: [require("nativewind/preset")],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter-semibold': ['Inter18pt-SemiBold'],
+      },
+    }
+
   },
 };
